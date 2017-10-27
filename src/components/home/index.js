@@ -9,7 +9,6 @@ import {
 } from 'react-native';
 
 import {Container, Content, Button} from 'native-base';
-import { StackNavigator } from 'react-navigation';
 import Echarts from 'native-echarts';
 import Dimensions from 'Dimensions';
 const {width} = Dimensions.get('window');
@@ -99,7 +98,7 @@ export default class HomeScreen extends Component {
 		return (
 			<View style={styles.container}>
 			<View>
-				<Echarts option={option} height={500} width={width}/>
+				<Echarts option={option} height={1000} width={width}/>
 			</View>
 				<View style={{justifyContent: 'center'}}>
 				<View>
@@ -108,8 +107,8 @@ export default class HomeScreen extends Component {
 						} ,user: 'Lucy' })}>
 							<Text> Click Me to scence1! </Text>
 						</Button>
-					</View>
-					</View>
+				</View>
+				</View>
 			</View>
 		);
 	}
