@@ -8,17 +8,17 @@
 
 ## Warning
 
-> `@remobile/react-native-echarts` ??react class???????????????
+> `@remobile/react-native-echarts` 存在react class版本问题，需修改依赖，建议慎用
 
-### ????native-echarts
+### 推荐使用native-echarts
 
 >  npm install native-echarts --save
 
-| ??  | ?? |
+| 参数  | 描述 |
 | ------------- | ------------- |
-|  option (object)  | echarts??????  |
-|  width (number) | ?????  |
-|  height (number)| ?????
+|  option (object)  | echarts图表的配置项  |
+|  width (number) | 图表的宽度  |
+|  height (number)| 图表的高度
 
 ```
 import React, { Component } from 'react';
@@ -44,25 +44,25 @@ import Echarts from 'native-echarts';
 
 	render() {
 		const option = {
-			//???????????????????
+			//点击某一个点的数据的时候，显示出悬浮窗
 			tooltip : {
 				trigger: 'axis'
 			},
-			//????????????
+			//可以手动选择现实几个图标
 			legend: {
-				data:['??','??']
+				data:['苹果','橘子']
 			},
-			//????
+			//各种表格
 			toolbox: {
-				//??icon?????
+				//改变icon的布局朝向
 				//orient: 'vertical',
 				show : true,
 				showTitle:true,
 				feature : {
-					//show???????readOnly????
+					//show是否显示表格，readOnly是否只读
 					dataView : {show: true, readOnly: false},
 					magicType : {
-						//???  ???    ???? ????
+						//折线图  柱形图    总数统计 分开平铺
 						type: ['line', 'bar','stack','tiled'],
 					},
 
@@ -70,31 +70,31 @@ import Echarts from 'native-echarts';
 			},
 			xAxis : [
 				{
-					//??????????????????????????
+					//就是一月份这个显示为一个线段，而不是数轴那种一个点点
 					boundaryGap:true,
 					type : 'category',
-					name : '??',
-					data : ['1?','2?','3?','4?','5?','6?','7?','8?']
+					name : '时间',
+					data : ['1月','2月','3月','4月','5月','6月','7月','8月']
 				}
 			],
 			yAxis : [
 				{
 					type : 'value',
-					name : '??(kg)'
+					name : '销量(kg)'
 				}
 			],
-			//??????
+			//图形的颜色组
 			color:['rgb(249,159,94)','rgb(67,205,126)'],
-			//???????????????????
+			//需要显示的图形名称，类型，以及数据设置
 			series : [
 				{
-					name:'??',
-					//???
+					name:'苹果',
+					//默认显
 					type:'bar',
 					data:this.state.apple
 				},
 				{
-					name:'??',
+					name:'橘子',
 					type:'bar',
 					data:this.state.organ
 				}
@@ -109,7 +109,7 @@ import Echarts from 'native-echarts';
 				<View style={{justifyContent: 'center'}}>
 				<View>
 						<Button small success onPress={() => navigate('Item', {callback: (data)=>{
-							console.log('..........go'); // ?????'????'
+							console.log('..........go'); // 打印值为：'回调参数'
 						} ,user: 'Lucy' })}>
 							<Text> Click Me to scence1! </Text>
 						</Button>
