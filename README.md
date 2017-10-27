@@ -6,6 +6,12 @@
 - [x] [native-echarts](https://www.npmjs.com/package/native-echarts)
 - [x] native-echarts Demo
 
+## Warning
+
+> `@remobile/react-native-echarts` ??react class???????????????
+
+> ????native-echarts
+
 ## Install
 
 > `git clone git@github.com:liukaixin01/react-native-echarts.git`
