@@ -18,7 +18,7 @@ import Item from './item'
 export default class HomeScreen extends Component {
 
 	static navigationOptions = {
-		tabBarLabel: 'Home',
+		tabBarLabel: '柱形图',
 		title: 'Home header',
 		tabBarIcon: ({ tintColor }) => (
 		<Image
@@ -98,7 +98,7 @@ export default class HomeScreen extends Component {
 		return (
 			<View style={styles.container}>
 			<View>
-				<Echarts option={option} height={1000} width={width}/>
+				<Echarts option={option} height={500} width={width}/>
 			</View>
 				<View style={{justifyContent: 'center'}}>
 				<View>
