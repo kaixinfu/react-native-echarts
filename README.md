@@ -143,6 +143,20 @@ const styles = StyleSheet.create({
 });
 
 ```
+##example
+
+> 柱形图
+
+![](http://liukaixin.cn/echarts/column.png)
+
+> 分析图
+
+![](http://liukaixin.cn/echarts/annular.png)
+
+> 波形图
+
+![](http://liukaixin.cn/echarts/wave.png)
+
 ## Install
 
 > `git clone git@github.com:liukaixin01/react-native-echarts.git`
